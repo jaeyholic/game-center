@@ -34,10 +34,18 @@ const games = [
   }
 ];
 class App extends Component {
+  state = {
+    games: []
+  };
+
+  componentDidMount() {
+    this.setState({ games });
+  }
+
   render() {
     return (
       <div className="ui container">
-        <GamesList games={games} />
+        <GamesList games={this.state.games} />
       </div>
     );
   }
