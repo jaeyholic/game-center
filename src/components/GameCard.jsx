@@ -3,18 +3,18 @@ import React from "react";
 const GameCard = ({ game }) => (
   <div className="ui card">
     <div className="image">
-      <div className="ui green ribbon label">${game.price}</div>
-      <img src={game.thumbnail} alt={game.name} />
+      <span className="ui green ribbon label">${game.price}</span>
+      <img src={game.thumbnail} alt="Game Cover" />
     </div>
     <div className="content">
       <a href="#" className="header">
         {game.name}
       </a>
       <div className="meta">
-        <li className="icon users" />
+        <i className="icon users" />
         {game.players}&nbsp;
-        <li className="icon wait" />
-        {game.mins} mins.
+        <i className="icon wait" />
+        {game.duration}
       </div>
     </div>
   </div>
